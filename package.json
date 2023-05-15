@@ -6,6 +6,7 @@
     "dev": "astro check --watch & astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build:image": "astro build --config ./astro.docker.config.ts",
     "preview": "astro preview",
     "test": "vitest",
     "astro": "astro",

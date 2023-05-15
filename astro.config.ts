@@ -8,8 +8,6 @@ import partytown from "@astrojs/partytown";
 import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
-import node from "@astrojs/node";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://edelorg.com",

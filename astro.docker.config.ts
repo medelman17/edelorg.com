@@ -1,13 +1,11 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import partytown from "@astrojs/partytown";
 import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
-
 import node from "@astrojs/node";
 
 // https://astro.build/config
