@@ -1,0 +1,5 @@
+{
+  "extends": "@edelorg/tsconfig/node18.json",
+  "include": ["**/*.ts", "tsup.config.ts"],
+  "exclude": ["dist"]
+}
