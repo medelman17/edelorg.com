@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 18",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "rootDirs": ["src"],
+    "outDir": "dist",
+    "lib": ["ES2021"],
+    "module": "es2022",
+    "target": "ES2021",
+    "types": ["node"]
+  }
+}

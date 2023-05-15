@@ -1,0 +1,22 @@
+{
+  "name": "@edelorg/eslintrc",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "eslint-preset.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.35.0"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-turbo": "^0.0.9"
+  }
+}
