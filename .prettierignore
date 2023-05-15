@@ -6,3 +6,5 @@ node_modules
 *.md
 *.mdx
 pnpm-lock.yaml
+vercel.json
+node_modules/**
