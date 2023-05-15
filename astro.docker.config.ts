@@ -15,5 +15,7 @@ export default defineConfig({
   site: "https://edelorg.com",
   integrations: [react(), sitemap(), mdx(), tailwind(), partytown(), compress(), prefetch()],
   output: 'server',
-  adapter: vercel()
+  adapter: node({
+    mode: "standalone"
+  })
 });
