@@ -1,3 +1,3 @@
-import {} from 'astro:content';
+import {} from 'astro:content'
 
 export async function allPages() {}
