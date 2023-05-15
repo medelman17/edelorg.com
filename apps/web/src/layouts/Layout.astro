@@ -1,40 +1,61 @@
 ---
 export interface Props {
-  title: string
+	title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="tw-flex tw-h-screen tw-overflow-hidden">
+			<main
+				class="tw-relative tw-flex tw-flex-1 tw-flex-col tw-overflow-y-auto tw-overflow-x-hidden tw-bg-white"
+			>
+				<nav class="tw-bg-white tw-px-2 tw-py-2.5 tw-shadow-sm sm:tw-px-4">
+					<div class="container tw-mx-auto tw-flex tw-flex-wrap tw-items-center tw-justify-between">
+						<a href="/" class="tw-flex tw-items-center">
+							<img src="/favicon.svg" class="tw-mr-3 tw-h-6 sm:tw-h-9" alt="Astro Logo" />
+							<span class="tw-self-center tw-whitespace-nowrap tw-text-xl tw-font-semibold"
+								>{title}</span
+							>
+						</a>
+					</div>
+				</nav>
+				<div class="tw-container tw-mx-auto tw-my-10 tw-flex-grow">
+					<slot />
+				</div>
+				<footer
+					class="tw-rounded-lg tw-bg-white tw-p-4 tw-shadow md:tw-flex md:tw-items-center md:tw-justify-between md:tw-p-6"
+				>
+					<span class="tw-text-sm tw-text-gray-500 sm:tw-text-center">
+						Built With:
+						<a href="https://astro.build/" class="hover:tw-underline">Astro</a>
+					</span>
+				</footer>
+			</main>
+		</div>
+	</body>
 </html>
 <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #f6f6f6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
 </style>
