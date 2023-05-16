@@ -16,7 +16,7 @@ export default defineConfig({
 			theme: 'material-theme-palenight',
 		},
 	},
-	integrations: [react(), mdx(), tailwind()],
+	integrations: [tailwind({ config: { applyBaseStyles: false } }), sitemap(), compress({})],
 	output: 'server',
 	adapter: vercel(),
 });

@@ -1,3 +1,4 @@
-export function template_say_hello() {
-  console.log("Hello! I'm just a placeholder function!");
-}
+import * as permalinks from "./permalinks";
+import * as misc from "./misc";
+
+export { permalinks, misc };

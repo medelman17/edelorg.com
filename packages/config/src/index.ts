@@ -1,3 +1,5 @@
-export function template_say_hello() {
-  console.log("Hello! I'm just a placeholder function!");
-}
+export * from "./types";
+import * as defaults from "./defaults";
+import { from } from "./config";
+
+export { defaults, from };

@@ -1,0 +1,29 @@
+---
+import  '../assets/styles/base.css';
+import {Config, from} from '@edelorg/config';
+import BasicScripts from '../components/BasicScripts.astro';
+import MetaTags from '../components/MetaTags.astro';
+
+export interface Props {
+    config?: Config;
+};
+
+const {config = from()} = Astro.props;
+const {web: {base: {language = 'en', textDirection = 'ltr'}}} = config;
+---
+
+<!DOCTYPE html>
+<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+<head>
+    <MetaTags {config} />
+</head>
+<body class="antialiased text-page bg-light dark:text-slate-300 tracking-tight dark:bg-dark">
+    <slot />
+    <BasicScripts {config} />
+    <style is:global>
+        img {
+            content-visibility: auto;
+        }
+    </style>
+</body>
+</html>

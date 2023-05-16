@@ -1,0 +1,19 @@
+---
+import {Config, from} from '@edelorg/config'
+import Layout from './BaseLayout.astro';
+
+export interface Props {
+    config?: Config
+}
+
+const {config = from()} = Astro.props;
+---
+
+<Layout {config}>
+    <slot name = "announcement" />
+    <slot name = "header" />
+    <main>
+        <slot />
+    </main>
+    <slot name = "footer" />
+</Layout>

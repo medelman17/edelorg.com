@@ -1,0 +1,21 @@
+---
+import {Config, from} from '@edelorg/config'
+
+export interface Props {
+    config?: Config
+}
+
+const {config = from()} = Astro.props
+const {web: {base: defaultTheme}} = config;
+---
+
+<script is:inline define:vars={{ defaultTheme }}>
+    // function apply_theme(theme) {
+    //     if (theme === 'dark') {
+    //         document.documentElement.classList.add('dark')
+    //     } else {
+    //         document.documentElement.classList.remove('dark')
+    //     }
+    // }
+
+</script>

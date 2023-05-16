@@ -1,9 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/PageLayout.astro';
+import {Config, from} from '@edelorg/config'
+
+const config: Config = from();
 ---
 
-<Layout title="EdelOrg">
+<Layout {config}>
 	<div class="tw-grid tw-grid-cols-3 tw-gap-4 md:tw-gap-10 lg:tw-grid-cols-5">
 		<div class="tw-col-span-1">One</div>
 		<div class="tw-col-span-1">Two</div>
